@@ -25,10 +25,8 @@ def is_tip(post_body):
 	if "+/u/cocainetip"in post_body:
 		after_split = post_body.split("+/u/cocainetip")[-1]
 		cocaine = re.findall("[0-9]+ Oz. Cocaine", after_split)[0]
-		print "28"
 		if cocaine:
 			oz = re.findall("[0-9]+", cocaine)[0]
-			print "31"
 			return oz
 		return False
 	return False
@@ -37,9 +35,7 @@ if __name__ == '__main__':
 	while True:
 		comments = r.get_comments("thirdegree")
 		for post in comments:
-			print "40"
 			if post.id not in done:	
-				print "42"
 				oz = is_tip(post.body)
 				done.append(post.id)
 				if oz:
