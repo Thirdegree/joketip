@@ -33,7 +33,7 @@ def is_tip(post_body):
 
 if __name__ == '__main__':
 	while True:
-		comments = r.get_comments("thirdegree")
+		comments = r.get_comments("all")
 		for post in comments:
 			if post.id not in done:	
 				oz = is_tip(post.body)
