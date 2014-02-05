@@ -43,7 +43,7 @@ if __name__ == '__main__':
 					parent = r.get_submission(parent_permalink)
 					sleep(2)
 					parent_name = parent.comments[0].author.name
-					print "**[Verified]**: /u/%s -> /u/%s **Cocaine (%s Oz.)**"%(parent_name, post.author.name, oz)
-					post.reply("**[Verified]**: /u/%s -> /u/%s **Cocaine (%s Oz.)**"%(parent_name, post.author.name, oz))
+					print "**[Verified]**: /u/%s -> /u/%s **Cocaine (%s Oz.)**"%(post.author.name, parent_name,  oz)
+					post.reply("**[Verified]**: /u/%s -> /u/%s **Cocaine (%s Oz.)**"%(post.author.name, parent_name, oz))
 					sleep(2)
 		sleep(10)
