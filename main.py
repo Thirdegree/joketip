@@ -24,7 +24,7 @@ while Trying:
 def is_tip(post_body):
 	if "+/u/cocainetip"in post_body:
 		after_split = post_body.split("+/u/cocainetip")[-1]
-		cocaine = re.findall("[0-9]+ Oz. Cocaine", after_split)[0]
+		cocaine = re.findall("(?i)[0-9]+ Oz. Cocaine", after_split)[0]
 		if cocaine:
 			oz = re.findall("[0-9]+", cocaine)[0]
 			return oz
