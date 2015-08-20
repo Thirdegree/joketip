@@ -3,7 +3,7 @@ from time import sleep
 from collections import deque
 import re
 
-r = praw.Reddit("Cocainetip bot by /u/Thirdegree")
+r = praw.Reddit("Joketip bot by /u/Thirdegree")
 
 def login_():
 	USERNAME = raw_input("Username?\n> ")
@@ -23,7 +23,7 @@ while Trying:
 
 def is_tip(post_body):
 	if "+/u/cocainetip"in post_body:
-		after_split = post_body.split("+/u/cocainetip")[-1]
+		after_split = post_body.split("+/u/joketip")[-1]
 		cocaine = re.findall("(?i)[0-9]+ Oz. Cocaine", after_split)[0]
 		if cocaine:
 			oz = re.findall("[0-9]+", cocaine)[0]
